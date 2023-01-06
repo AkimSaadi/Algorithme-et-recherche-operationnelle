@@ -1,0 +1,156 @@
+Exercice 1 :
+
+/* Variable definitions */
+var xA >= 0;
+var xB >= 0;
+var xC >= 0;
+var xD >= 0;
+var xE >= 0;
+var xFond = 100000;
+var xRA >=0;
+
+/* Objective function */
+maximize obj: xRA;
+
+/* Constraints */
+R1 : xB + xE >= xFond * 0.5;
+R2 : xA + xE <= xFond * 0.5;
+R3 : xB + xD >= xFond * 0.4;
+R4 : 0.3 * xRA <= xB + xD;
+R5 : xA + xB + xC + xD + xE <= xFond;
+R6 : xA * 0.1 + xB * 0.04 + xC * 0.07 +xD * 0.06 + xE * 0.08 =xRA ;
+
+Pour maximiser son revenu annuel et gagner 7100€, agent financier doit 
+investir 40000€ dand l'obligation A, 40000e dans la B, 9999,99€ dans la C,
+0e dans la D et 10000€ dans la E
+
+Exercice 2 :
+
+/* Variable definitions */
+var x11 >= 0;
+var x12 >= 0;
+var x13 >= 0;
+var x21 >= 0;
+var x22 >= 0;
+var x23 >= 0;
+var x31 >= 0;
+var x32 >= 0;
+var x33 >= 0;
+var cout >= 0 ;
+
+/* Objective function */
+minimize obj: cout;
+
+/* Constraints */
+R1 : x11 + x12 + x13 = 275 ;
+R2 : x21 + x22 + x23 = 400 ;
+R3 : x31 + x32 + x33 = 300 ;
+R4 : x11 + x21 + x31 <= 200 ;
+R5 : x12 + x22 + x32 <= 550 ;
+R6 : x13 + x23 + x33 <= 225 ;
+R7 : cout = 0.1 * (x11*210+x12*500+x13*400+x21*350+x22*300+x23*220+x31*550+x32*200+x33*250) ;
+
+Pour minimiser son cout de transport, la coopérative agricole devra envoyer
+200 tonnes de son blé de la région 1 à la minoterie 1, et 75 à la minoterie 3,
+250 de la région 2 à la minoterie 2, 150 à la minoterie 3 et 300 tonnes de la
+region 3 à la minoterie 2. Le cout de transport sera de 24000€.
+
+Exercice 3 :
+/* Variable definitions */
+var x04 >= 9;
+var x48 >= 21;
+var x812 >=  25;
+var x1216 >= 16;
+var x1620 >= 30;
+var x2024 >= 12;
+var xtotal >=0;
+var x08 >=0;
+var x412 >=0;
+var x816 >=0;
+var x1220 >=0;
+var x1624 >=0;
+var x204 >=0;
+
+/* Objective function */
+minimize obj: xtotal;
+
+/* Constraints */
+R0 : x08 >= x04 - x204;
+R1 : x412 >= x48-x08;
+R2 : x816 >= x812 - x412;
+R3 : x1220 >= x1216 - x816;
+R4 : x1624 >= x1620 - x1220;
+R5 : x204 >= x2024 - x1624;
+R6 : xtotal = x08 + x412 + x816 + x1220 + x1624+x204; 
+
+Le poste de police devra employer au minimum 64 policiers, 9 de minuit à 8h,
+12 de 4h à midi, 13 de 8h à 16h, 18 de 12h à 20h, 12 de 16h à minuit et aucun
+de 20h à 4h.
+
+Exercice 4 :
+/* Variable definitions */
+var melangetotal = 4000;
+var melange1 >=0;
+var melange2 >=0;
+var melange3 >=0;
+var melange4 >=0;
+var cout >=0;
+
+/* Objective function */
+minimize obj: cout;
+
+/* Constraints */
+R1 : melange1 + melange2 + melange3 + melange4 = melangetotal;
+R2 : 0.3 * melange1 + 0.05 * melange2 + 0.2 * melange3 + 0.1 * melange4 >=0.2 *melangetotal;
+R3 : 0.1 * melange1 + 0.3 * melange2 + 0.15 * melange3 + 0.1 * melange4 >=0.15 *melangetotal;
+R4 : 0.2 * melange1 + 0.15 * melange2 + 0.2 * melange3 + 0.3 * melange4 >=0.25 *melangetotal;
+R5 : cout = melange1 * 0.5 + melange2 * 0.6 + melange3 * 0.64 + melange4 * 0.3;
+
+Il n'y aucune combinaison de mélange qui fonctionne pour respecter les contraintes
+
+Exercice 5 :
+
+/* Variable definitions */
+var x1 >= 0;
+var x2 >= 0;
+var x3 >=0;
+var x4 >=0;
+var x5 >=0;
+var x6 >=0;
+var cout >=0;
+var p1 >=0;
+var p2 >=0;
+var p3 >=0;
+var p4 >=0;
+var p5 >=0;
+var p6 >=0;
+
+/* Objective function */
+minimize obj: cout;
+
+/* Constraints */
+
+R1 : x1+2750-1000 = p1;
+R2 : 6000 >= p1 >= 1500;
+R3 : x2 + p1 -4500 = p2;
+R4 : 6000 >= p2 >= 1500;
+R5 : x3 + p2 - 6000 = p3;
+R6 : 6000 >= p3 >= 1500;
+R7 : x4 + p3 -5500 = p4;
+R8 : 6000 >= p4 >= 1500;
+R9 : x5 +  p4 -3500 = p5;
+R10 : 6000 >= p5 >= 1500;
+R11 : x6 + p5 -4000 = p6;
+R12 : 6000 >= p6 >= 1500;
+R13 : cout = 240 * (x1 + 0.015 * p1) + 250 * (x2 + 0.015 * p2) + 265 * (x3 + 0.015 * p3) + 285 * (x4 + 0.015 * p4) + 280 * (x5 + 0.015 * p5) +285 * (x6 + 0.015 * p6);
+R14 : x1 <= 4000;
+R15 : x2 <= 3500;
+R16 : x3 <=4000;
+R17 : x4 <=4500;
+R18 : x5 <=4000;
+R19 : x6 <=3500;
+
+La compagnie Frigora devra fabriquer 4000 unités de conditionnement d'air
+le premier mois, 3500 le second, 4000 le troisième, 4250 le quatrième,
+4000 le cinquième, 3500 le sixième, pour avoir un cout minimal de prodution
+et de stockage de 6294418,75€
